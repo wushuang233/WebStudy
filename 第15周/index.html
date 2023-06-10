@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022013565陈景源</title>
+    <script>
+        window.onload = function () {
+            var oA = document.getElementById('all');
+            var a = oA.getElementsByTagName('input')
+            oA.onclick = function () {
+                for(var i = 0;i < a.length;i++){
+                    a[i].checked = true;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="all">
+        <input type="button" value="全选">
+
+        <hr>
+
+        <input type="checkbox" name="1" id="1">
+        <input type="checkbox" name="2" id="2">
+        <input type="checkbox" name="3" id="3">
+        <input type="checkbox" name="4" id="4">
+    </div>
+
+</body>
+
+</html>
