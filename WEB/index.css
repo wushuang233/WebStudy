@@ -50,6 +50,7 @@ body::-webkit-scrollbar {
     background-image: url('head.jpg');
     border-radius: 100%;
     background-size: cover;
+    z-index: 99;
 
     width: 6rem;
     height: 5rem;
@@ -68,7 +69,7 @@ body::-webkit-scrollbar {
     background-image: url('iconeye.png');
     border-radius: 100%;
     background-size: cover;
-    background-position: 50%;
+    background-position: center;
     z-index: 99;
 
     height: 8vh;
@@ -101,25 +102,31 @@ nav ul li{
     align-items: center;
 
     background-color: #333;
+    transition: background-color 0.3s ease;
 
     height: 100%;
 }
 /* 对超链接设计样式 */
 nav ul li a {
 
+    display: flex;
+    align-items: center;
+
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+
 
     padding: 10px 20px;
+    height: 100%;
+    width: 100%;
   }
 
-nav ul li a:hover {
+nav ul li:hover {
     background-color: #555;
   }
   
-  nav ul li a.active {
+  nav ul li.active {
     background-color: #777;
   }
 
@@ -154,7 +161,7 @@ nav ul li a:hover {
     min-width: 42.8%;
 }
 /* 右下 */
-.buttom{
+.bottom{
     display: flex;
     flex: 1;
 
