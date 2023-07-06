@@ -5,7 +5,7 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* img {
+img {
     position: absolute;
     top: 0;
     left: 0;
@@ -14,10 +14,10 @@
     background-image: url('head.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    filter: blur(2px);
+    /* filter: blur(2px); */
     background-color: rgba(0, 0, 0, 0.5); 
     z-index: -1;
-} */
+}
 
 /* 导航 */
 nav {
@@ -103,53 +103,69 @@ body {
     /* 其他背景属性 */
   }
 
-.box-container {
+  .box1{
     position: relative;
-    height: 400px;
-    margin-top: 120px;
-
-}
-
-.left-box {
-    position: absolute;
+    top: 100px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    left: 10%;
-    font-size: larger;
-    width: 50%;
-    /* height: 100%; */
-    padding: 2vh;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景颜色 */
-    z-index: 1;
-    /* 左盒子在上层 */
-}
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 
-.right-box {
-    position: absolute;
+  .box2{
+    position: relative;
+    top: 180px;
     display: flex;
-    top: 50%;
-    left: 40%;
-    width: 50%;
-    /* height: 100%; */
-    padding: 2vh;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景颜色 */
-    z-index: 0;
-    /* 右盒子在下层 */
-    font-size: larger;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 
-    transition: z-index 0.5s ease-in-out;
-}
+  .box3{
+    position: relative;
+    top: 260px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 
+  .box4{
+    position: relative;
+    top: 340px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 
-.right-box:hover {
-    z-index: 99;
-}
+  .card-filp {
+    /* flex: 1; */
+    height: 200px;
+    width: 200px;
+    /* position: absolute; */
+    transform-style: preserve-3d;
+    transition: 1s;
+  }
+
+  .front,
+  .back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    backface-visibility:hidden;
+  }
+  .front {
+    /* background: lightgreen; */
+  }
+  .back {
+    background: lightblue;
+  }
+  .back {
+    transform: rotateY(180deg);
+  }
+  .card-filp:hover {
+    transform: rotateY(180deg);
+  }
+
 
 /* 检测屏幕大小，更改网页属性 */
 @media screen and (max-width:768px) {
@@ -234,49 +250,5 @@ body {
         }
     }
     
-    .box-container {
-        position:relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        top: 80px;
-    }
-    
-    .left-box {
-        position: relative;
-        display: flex;
-        font-size: larger;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.5);
-        width: 80%;
-        margin-bottom: 10px; /* 添加上下间距 */
-        z-index: 1;
-
-        padding: 0;
-        top: 80px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-    }
-    
-    .right-box {
-        position: relative;
-        display: flex;
-        font-size: larger;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.5);
-        
-        width: 80%;
-        margin-bottom: 10px; /* 添加上下间距 */
-        z-index: 1;
-        
-        padding: 0;
-        top: calc(10% + 80px);
-        right: 0px;
-        bottom: 0px;
-        left: 0px;    
-    }
 
 }

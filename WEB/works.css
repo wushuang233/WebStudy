@@ -102,55 +102,27 @@ body {
     background-attachment: fixed;
     /* 其他背景属性 */
   }
-
-.box-container {
+  .box{
     position: relative;
-    height: 400px;
-    margin-top: 120px;
-
-}
-
-.left-box {
-    position: absolute;
+    top: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    left: 10%;
-    font-size: larger;
-    width: 50%;
+  }
+  .slideshow {
+    width: 40%;
     /* height: 100%; */
-    padding: 2vh;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景颜色 */
-    z-index: 1;
-    /* 左盒子在上层 */
-}
+    /* overflow: hidden; */
+    position: relative;
+  }
 
-.right-box {
+  /* 设置轮播图像的样式 */
+  .slideshow img {
+    width: 100%;
+    height: auto;
     position: absolute;
-    display: flex;
-    top: 50%;
-    left: 40%;
-    width: 50%;
-    /* height: 100%; */
-    padding: 2vh;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景颜色 */
-    z-index: 0;
-    /* 右盒子在下层 */
-    font-size: larger;
-
-    transition: z-index 0.5s ease-in-out;
-}
-
-
-.right-box:hover {
-    z-index: 99;
-}
-
+    transition: opacity 1s ease-in-out;
+  }
 /* 检测屏幕大小，更改网页属性 */
 @media screen and (max-width:768px) {
     body {
@@ -234,49 +206,6 @@ body {
         }
     }
     
-    .box-container {
-        position:relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        top: 80px;
-    }
-    
-    .left-box {
-        position: relative;
-        display: flex;
-        font-size: larger;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.5);
-        width: 80%;
-        margin-bottom: 10px; /* 添加上下间距 */
-        z-index: 1;
-
-        padding: 0;
-        top: 80px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-    }
-    
-    .right-box {
-        position: relative;
-        display: flex;
-        font-size: larger;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.5);
-        
-        width: 80%;
-        margin-bottom: 10px; /* 添加上下间距 */
-        z-index: 1;
-        
-        padding: 0;
-        top: calc(10% + 80px);
-        right: 0px;
-        bottom: 0px;
-        left: 0px;    
-    }
+   
 
 }

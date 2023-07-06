@@ -5,7 +5,7 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* img {
+img {
     position: absolute;
     top: 0;
     left: 0;
@@ -15,9 +15,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     filter: blur(2px);
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景颜色 */
     z-index: -1;
-} */
+}
 
 /* 导航 */
 nav {
@@ -103,53 +103,130 @@ body {
     /* 其他背景属性 */
   }
 
-.box-container {
+  .box{
     position: relative;
-    height: 400px;
-    margin-top: 120px;
+    display: flex;
+    top: 80px;
+    justify-content: center;
+    align-items: center;
+  }
+.part1{
+    position: absolute;
+    display: flex;
+    top: 80px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 
 }
 
-.left-box {
+.part2{
+    position: absolute;
+    display: flex;
+    top: 580px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.part3{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    top: 1080px;
+    justify-content: center;
+    align-items: center;
+}
+.img1{
+    display: flex;
+    position: absolute;
+    width: 90%;
+    height: 40vh;
+    top: 80px;
+    background-image: url("photo/records1.jpg");
+    background-position: center;
+    background-size: cover;
+
+    border-radius: 20%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.img2{
+    display: flex;
+    position: absolute;
+    width: 90%;
+    height: 40vh;
+    top: 80px;
+    background-image: url("photo/records2.jpg");
+    background-position: center;
+    background-size: cover;
+
+    border-radius: 20%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.img3{
+    display: flex;
+    position: absolute;
+    width: 90%;
+    height: 40vh;
+    top: 80px;
+    background-image: url("photo/records3.jpg");
+    background-position: center;
+    background-size: cover;
+
+    border-radius: 20%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.study{
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+
+    font-size: x-large;
+    font-weight: bold;
+
+    top: 80px;
+    z-index: 99;
+}
+
+
+.skill{
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    left: 10%;
-    font-size: larger;
-    width: 50%;
-    /* height: 100%; */
-    padding: 2vh;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景颜色 */
-    z-index: 1;
-    /* 左盒子在上层 */
-}
-
-.right-box {
-    position: absolute;
-    display: flex;
-    top: 50%;
-    left: 40%;
-    width: 50%;
-    /* height: 100%; */
-    padding: 2vh;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景颜色 */
-    z-index: 0;
-    /* 右盒子在下层 */
-    font-size: larger;
-
-    transition: z-index 0.5s ease-in-out;
-}
+    flex-direction: column;
 
 
-.right-box:hover {
+    font-size: x-large;
+    font-weight: bold;
+
+    top: 80px;
     z-index: 99;
 }
+
+.book{
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+
+    font-size: x-large;
+    font-weight: bold;
+
+    top: 80px;
+    z-index: 99;
+}
+
 
 /* 检测屏幕大小，更改网页属性 */
 @media screen and (max-width:768px) {
@@ -233,50 +310,16 @@ body {
             opacity: 1;
         }
     }
-    
-    .box-container {
-        position:relative;
+    .img1{
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        top: 80px;
-    }
-    
-    .left-box {
-        position: relative;
-        display: flex;
-        font-size: larger;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.5);
-        width: 80%;
-        margin-bottom: 10px; /* 添加上下间距 */
-        z-index: 1;
-
-        padding: 0;
-        top: 80px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-    }
-    
-    .right-box {
-        position: relative;
-        display: flex;
-        font-size: larger;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.5);
-        
-        width: 80%;
-        margin-bottom: 10px; /* 添加上下间距 */
-        z-index: 1;
-        
-        padding: 0;
-        top: calc(10% + 80px);
-        right: 0px;
-        bottom: 0px;
-        left: 0px;    
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    top: 80px;
+    background-image: url("photo/records1.jpg");
+    background-position: center;
+    background-size: cover;
     }
 
 }
+
